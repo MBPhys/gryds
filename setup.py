@@ -1,5 +1,20 @@
+import os
+import codecs
 import setuptools
 
+def read(fname):
+    file_path = os.path.join(os.path.dirname(__file__), fname)
+    return codecs.open(file_path, encoding='utf-8').read()
+
+
+# Add your dependencies in requirements.txt
+# Note: you can add test-specific requirements in tox.ini
+requirements = []
+with open('requirements.txt') as f:
+    for line in f:
+        stripped = line.split("#")[0].strip()
+        if len(stripped) > 0:
+            requirements.append(stripped)
 
 setuptools.setup(
     name="gryds",
