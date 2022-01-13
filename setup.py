@@ -18,7 +18,7 @@ with open('requirements.txt') as f:
 
 setuptools.setup(
     name="gryds",
-    version="0.0.1",
+    version="0.0.7",
     author="Marc Boucsein, Robin Koch", 
     description="Gryds: a Python package for geometric transformations of images",
     long_description="""
